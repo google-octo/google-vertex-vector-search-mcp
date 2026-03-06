@@ -28,7 +28,7 @@ REGION=us-central1
 BUCKET=$PROJECT_ID-vertex-embeddings
 
 # create bucket
-gsutil mb -l $REGION gs://$BUCKET
+gcloud storage buckets create gs://$BUCKET --location $REGION
 
 # create service-account and grant roles
 gcloud iam service-accounts create vertex-vector-sa
